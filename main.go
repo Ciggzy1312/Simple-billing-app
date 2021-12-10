@@ -53,8 +53,8 @@ func promptOptions(b bill) {
 		promptOptions(b)
 
 	case "s":
-		fmt.Println("You chose s")
-		break
+		b.save()
+		fmt.Println("bill has been saved as", b.name)
 
 	default:
 		fmt.Println("Choose a valid option...")
@@ -81,6 +81,4 @@ func main() {
 	mybill := createBill()
 
 	promptOptions(mybill)
-
-	fmt.Println(mybill.format())
 }
